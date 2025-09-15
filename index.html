@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfaisal University News</title>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Source+Sans+Pro:wght@400;600;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --alfaisal-blue: #003366;
+            --alfaisal-gold: #FFD700;
+            --alfaisal-light-blue: #4169E1;
+            --alfaisal-dark-text: #2e2d29;
+            --alfaisal-light-text: #555;
+            --alfaisal-border: #d1d1d1;
+            --alfaisal-light-bg: #f9f9f9;
+            --alfaisal-hover-gold: #FFC700;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--alfaisal-dark-text);
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .top-bar {
+            background-color: var(--alfaisal-blue);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .top-bar-links span {
+            font-weight: 600;
+        }
+
+        .top-bar-links a {
+            color: white;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar-links a:hover {
+            color: var(--alfaisal-gold);
+        }
+
+        .search-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .search-link:hover {
+            color: var(--alfaisal-gold);
+        }
+
+        .main-header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--alfaisal-border);
+            background-color: white;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: var(--alfaisal-blue);
+            line-height: 1;
+        }
+
+        .university-logo-svg {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover .university-logo-svg {
+            transform: scale(1.05);
+        }
+
+        .main-nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-nav a {
+            font-size: 18px;
+            color: var(--alfaisal-dark-text);
+            font-weight: 500;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: var(--alfaisal-blue);
+            border-bottom-color: var(--alfaisal-gold);
+        }
+
+        /* Main Content */
+        .page-title-section {
+            text-align: center;
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .page-title-section h1 {
+            font-family: 'Crimson Text', serif;
+            font-size: 56px;
+            font-weight: 700;
+            margin: 0 0 10px;
+            color: var(--alfaisal-blue);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .page-title-section p {
+            font-size: 24px;
+            color: var(--alfaisal-light-text);
+            margin: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 400;
+        }
+
+        .news-grid-section {
+            padding: 50px 0;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .news-card {
+            border: 1px solid var(--alfaisal-border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,51,102,0.15);
+            border-color: var(--alfaisal-gold);
+        }
+        
+        .news-card-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 215, 0, 0.9);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .play-button:hover {
+            background-color: var(--alfaisal-gold);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        
+        .play-button::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-left: 20px solid var(--alfaisal-blue);
+            margin-left: 5px;
+        }
+
+        .news-card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card-category {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--alfaisal-blue);
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .news-card-title {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin: 0;
+            color: var(--alfaisal-dark-text);
+            transition: color 0.3s ease;
+            flex-grow: 1;
+        }
+
+        .news-card:hover .news-card-title {
+            color: var(--alfaisal-blue);
+        }
+
+        .more-news-section {
+            text-align: center;
+            padding: 60px 0;
+            background-color: var(--alfaisal-light-bg);
+        }
+
+        .more-news-button {
+            background: linear-gradient(135deg, var(--alfaisal-blue), var(--alfaisal-light-blue));
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,51,102,0.2);
+        }
+
+        .more-news-button:hover {
+            background: linear-gradient(135deg, var(--alfaisal-gold), var(--alfaisal-hover-gold));
+            color: var(--alfaisal-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.3);
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: var(--alfaisal-light-bg);
+            padding: 60px 0;
+            border-top: 1px solid var(--alfaisal-border);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .social-icons a {
+            font-size: 24px;
+            color: var(--alfaisal-light-text);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: white;
+            background-color: var(--alfaisal-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,51,102,0.2);
+        }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 30px;
+        }
+
+        .footer-column h3 {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--alfaisal-blue);
+            letter-spacing: 1px;
+            margin: 0 0 15px;
+            text-transform: uppercase;
+        }
+
+        .footer-column ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            font-size: 16px;
+            color: var(--alfaisal-light-text);
+            transition: color 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--alfaisal-blue);
+        }
+        
+        .footer-buttons a {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            border: 2px solid var(--alfaisal-border);
+            margin-bottom: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 25px;
+            color: var(--alfaisal-light-text);
+            transition: all 0.3s ease;
+        }
+
+        .footer-buttons a:hover {
+            border-color: var(--alfaisal-blue);
+            background-color: var(--alfaisal-blue);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .bottom-footer {
+            background: linear-gradient(135deg, var(--alfaisal-blue), var(--alfaisal-light-blue));
+            color: white;
+            padding: 40px 0;
+        }
+
+        .bottom-footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .bottom-footer .logo {
+            color: white;
+            font-size: 32px;
+        }
+        
+        .bottom-footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 14px;
+        }
+        
+        .bottom-footer-links div {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .bottom-footer-links a, .bottom-footer-links span {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .bottom-footer-links a:hover {
+            color: var(--alfaisal-gold);
+        }
+
+        /* Loading Animation */
+        .news-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .news-card:nth-child(1) { animation-delay: 0.1s; }
+        .news-card:nth-child(2) { animation-delay: 0.2s; }
+        .news-card:nth-child(3) { animation-delay: 0.3s; }
+        .news-card:nth-child(4) { animation-delay: 0.4s; }
+        .news-card:nth-child(5) { animation-delay: 0.5s; }
+        .news-card:nth-child(6) { animation-delay: 0.6s; }
+        .news-card:nth-child(7) { animation-delay: 0.7s; }
+        .news-card:nth-child(8) { animation-delay: 0.8s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .main-nav ul {
+                gap: 20px;
+            }
+            .main-nav a {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-links-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .main-header .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .top-bar .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .main-nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            .page-title-section h1 {
+                font-size: 40px;
+            }
+            .page-title-section p {
+                font-size: 18px;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .footer-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .bottom-footer .container {
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+                text-align: center;
+            }
+            .bottom-footer-links {
+                align-items: center;
+            }
+            .bottom-footer-links div {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .logo {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .footer-links-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* Additional Interactive Features */
+        .search-link:hover i {
+            transform: scale(1.2);
+        }
+
+        .top-bar-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -3px;
+            left: 50%;
+            background-color: var(--alfaisal-gold);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .top-bar-links a {
+            position: relative;
+        }
+
+        .top-bar-links a:hover::after {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-links">
+                    <span>Information for:</span>
+                    <a href="#">Students</a>
+                    <a href="#">Faculty & Staff</a>
+                    <a href="#">Families</a>
+                    <a href="#">Visitors</a>
+                    <a href="#">Alumni</a>
+                </div>
+                <a href="#" class="search-link">
+                    <i class="fas fa-search"></i>
+                    <span>Search</span>
+                </a>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <a href="#" class="logo">
+                    <svg class="university-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="blueGradient" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#4169E1;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+                            </radialGradient>
+                        </defs>
+                        <!-- Shield Background -->
+                        <path d="M50 5 L85 25 L85 65 Q85 85 50 95 Q15 85 15 65 L15 25 Z" fill="url(#blueGradient)" stroke="#FFD700" stroke-width="2"/>
+                        <!-- Crown Symbol -->
+                        <path d="M35 35 L40 25 L45 35 L50 25 L55 35 L60 25 L65 35 L60 40 L40 40 Z" fill="#FFD700"/>
+                        <!-- Arabic-inspired geometric pattern -->
+                        <circle cx="50" cy="55" r="8" fill="#FFD700"/>
+                        <path d="M42 55 L50 45 L58 55 L50 65 Z" fill="none" stroke="#FFD700" stroke-width="2"/>
+                        <!-- Knowledge symbol (book) -->
+                        <rect x="45" y="70" width="10" height="8" fill="#FFD700"/>
+                        <line x1="47" y1="72" x2="53" y2="72" stroke="#003366" stroke-width="1"/>
+                        <line x1="47" y1="74" x2="53" y2="74" stroke="#003366" stroke-width="1"/>
+                        <line x1="47" y1="76" x2="53" y2="76" stroke="#003366" stroke-width="1"/>
+                    </svg>
+                    Alfaisal University
+                </a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#">Academics</a></li>
+                        <li><a href="#">Research</a></li>
+                        <li><a href="#">Health Care</a></li>
+                        <li><a href="#">Campus Life</a></li>
+                        <li><a href="#">Athletics</a></li>
+                        <li><a href="#">Admission</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-title-section">
+            <div class="container">
+                <h1>Alfaisal News</h1>
+                <p>Stories about people, research, and innovation across the Kingdom</p>
+            </div>
+        </section>
+
+        <section class="news-grid-section container">
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=entropy" alt="Colorful abstract illustration of a microphone with sound waves and geometric shapes exploding from it.">
+                    </div>
+                    <div class="news-card-content">
+                        <p class="news-card-category">ACADEMICS</p>
+                        <h2 class="news-card-title">Course empowers students to communicate science to the public</h2>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&h=400&fit=crop&crop=entropy" alt="A crowd of Alfaisal football fans in a stadium">
+                    </div>
+                    <div class="news-card-content">
+                        <p class="news-card-category">ATHLETICS</p>
+                        <h2 class="news-card-title">5 Things to know about Alfaisal Football before its first home game</h2>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=entropy" alt="A smiling woman with short blonde hair, wearing a black blazer">
+                    </div>
+                    <div class="news-card-content">
+                        <p class="news-card-category">AWARDS</p>
+                        <h2 class="news-card-title">Scientist, advocate, and entrepreneur Lucy Shapiro to receive Lasker-Koshland Special Achievement Award</h2>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=400&fit=crop&crop=entropy" alt="A female scientist in a white lab coat working in a laboratory">
+                    </div>
+                    <div class="news-card-content">
+                        <p class="news-card-category">HEALTH & MEDICINE</p>
+                        <h2 class="news-card-title">Lung cancer cells in the brain connect with neurons to fuel tumor growth</h2>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=entropy" alt="A man with dark hair and a beard, wearing a blazer">
+                    </div>
+                    <div class="news-card-content">
+                        <p class="news-card-category">ARTS & HUMANITIES</p>
+                        <h2 class="news-card-title">Book introduces kids to woman who broke the arts glass ceiling</h2>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop&crop=entropy" alt="A group of people walking through a forest">
+                        <a href="#" class="play-button"></a>
+                    </div>
+                    <div class="news-card-content">
+                        <p class="news-card-category">LAW</p>
+                        <h2 class="news-card-title">Charting the journey of sacred Sáttítla to national monument status</h2>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&crop=entropy" alt="A research vessel in an icy arctic sea">
+                    </div>
+                    <div class="news-card-content">
+                        <p class="news-card-category">EARTH & CLIMATE</p>
+                        <h2 class="news-card-title">Scientists uncover extreme life inside the Arctic ice</h2>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=entropy" alt="Two students looking intently at laptops in a classroom">
+                    </div>
+                    <div class="news-card-content">
+                        <p class="news-card-category">EDUCATION</p>
+                        <h2 class="news-card-title">Alfaisal researchers team up with Google to launch game teaching responsible AI use</h2>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="more-news-section">
+            <button class="more-news-button" onclick="loadMoreNews()">More Alfaisal News</button>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Apple"><i class="fab fa-apple"></i></a>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-column">
+                    <h3>SCHOOLS</h3>
+                    <ul>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Engineering</a></li>
+                        <li><a href="#">Medicine</a></li>
+                        <li><a href="#">Pharmacy</a></li>
+                        <li><a href="#">Sciences & Gen. Studies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>ACADEMICS</h3>
+                    <ul>
+                        <li><a href="#">Undergraduate Programs</a></li>
+                        <li><a href="#">Graduate Programs</a></li>
+                        <li><a href="#">Research Programs</a></li>
+                    </ul>
+                    <h3>RESEARCH</h3>
+                    <ul>
+                        <li><a href="#">Research Centers</a></li>
+                        <li><a href="#">Libraries</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HEALTH CARE</h3>
+                    <ul>
+                        <li><a href="#">Alfaisal University Hospital</a></li>
+                        <li><a href="#">King Faisal Specialist Hospital</a></li>
+                    </ul>
+                    <h3>ONLINE LEARNING</h3>
+                    <ul>
+                        <li><a href="#">Alfaisal Online</a></li>
+                        <li><a href="#">Distance Learning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>ABOUT ALFAISAL</h3>
+                    <ul>
+                        <li><a href="#">Facts</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Accreditation</a></li>
+                        <li><a href="#">Leadership</a></li>
+                    </ul>
+                    <h3>ADMISSION</h3>
+                    <ul>
+                        <li><a href="#">Undergraduate</a></li>
+                        <li><a href="#">Graduate</a></li>
+                        <li><a href="#">Financial Aid</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>RESOURCES</h3>
+                    <ul>
+                        <li><a href="#">Campus Map</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Faculty Portal</a></li>
+                        <li><a href="#">Directory</a></li>
+                        <li><a href="#">Campus Life</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-buttons">
+                    <a href="#" onclick="smoothScroll('#apply')">Applying</a>
+                    <a href="#" onclick="smoothScroll('#visit')">Visiting</a>
+                    <a href="#" onclick="smoothScroll('#give')">Giving</a>
+                    <a href="#" onclick="smoothScroll('#careers')">Careers</a>
+                    <a href="#" onclick="smoothScroll('#faculty')">Faculty Positions</a>
+                    <a href="#" onclick="smoothScroll('#contact')">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="bottom-footer">
+        <div class="container">
+            <a href="#" class="logo">
+                <svg class="university-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px;">
+                    <defs>
+                        <radialGradient id="blueGradientFooter" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#4169E1;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+                        </radialGradient>
+                    </defs>
+                    <!-- Shield Background -->
+                    <path d="M50 5 L85 25 L85 65 Q85 85 50 95 Q15 85 15 65 L15 25 Z" fill="url(#blueGradientFooter)" stroke="#FFD700" stroke-width="2"/>
+                    <!-- Crown Symbol -->
+                    <path d="M35 35 L40 25 L45 35 L50 25 L55 35 L60 25 L65 35 L60 40 L40 40 Z" fill="#FFD700"/>
+                    <!-- Arabic-inspired geometric pattern -->
+                    <circle cx="50" cy="55" r="8" fill="#FFD700"/>
+                    <path d="M42 55 L50 45 L58 55 L50 65 Z" fill="none" stroke="#FFD700" stroke-width="2"/>
+                    <!-- Knowledge symbol (book) -->
+                    <rect x="45" y="70" width="10" height="8" fill="#FFD700"/>
+                    <line x1="47" y1="72" x2="53" y2="72" stroke="#003366" stroke-width="1"/>
+                    <line x1="47" y1="74" x2="53" y2="74" stroke="#003366" stroke-width="1"/>
+                    <line x1="47" y1="76" x2="53" y2="76" stroke="#003366" stroke-width="1"/>
+                </svg>
+                <span style="margin-left: 10px;">Alfaisal<br>University</span>
+            </a>
+            <div class="bottom-footer-links">
+                <div>
+                    <a href="#">Alfaisal Home</a>
+                    <a href="#">Maps & Directions</a>
+                    <a href="#">Search Alfaisal</a>
+                    <a href="#">Emergency Info</a>
+                </div>
+                <div>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Copyright</a>
+                    <a href="#">Trademarks</a>
+                    <a href="#">Non-Discrimination</a>
+                    <a href="#">Accessibility</a>
+                </div>
+                <span>© Alfaisal University. Riyadh, Saudi Arabia 11533.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,51,102,0.9); z-index: 9999; justify-content: center; align-items: center;">
+        <div style="text-align: center; color: white;">
+            <div style="width: 50px; height: 50px; border: 3px solid #FFD700; border-top: 3px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+            <p style="font-size: 18px; font-weight: 600;">Loading More News...</p>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, var(--alfaisal-blue), var(--alfaisal-light-blue)); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 15px rgba(0,51,102,0.3); transition: all 0.3s ease; z-index: 1000;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Smooth scrolling function
+        function smoothScroll(target) {
+            const element = document.querySelector(target);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Load more news functionality
+        function loadMoreNews() {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const button = document.querySelector('.more-news-button');
+            const newsGrid = document.querySelector('.news-grid');
+            
+            // Show loading
+            loadingOverlay.style.display = 'flex';
+            button.disabled = true;
+            button.innerHTML = 'Loading...';
+            
+            // Simulate API call
+            setTimeout(() => {
+                const additionalNews = [
+                    {
+                        category: 'TECHNOLOGY',
+                        title: 'Alfaisal launches new AI research initiative in partnership with Saudi Vision 2030',
+                        image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop&crop=entropy'
+                    },
+                    {
+                        category: 'MEDICINE',
+                        title: 'Breakthrough cancer treatment developed by Alfaisal researchers shows promising results',
+                        image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=600&h=400&fit=crop&crop=entropy'
+                    },
+                    {
+                        category: 'SUSTAINABILITY',
+                        title: 'Green campus initiative makes Alfaisal University carbon neutral by 2030',
+                        image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop&crop=entropy'
+                    },
+                    {
+                        category: 'INNOVATION',
+                        title: 'Student startup from Alfaisal wins regional entrepreneurship competition',
+                        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=entropy'
+                    }
+                ];
+                
+                // Add new cards to grid
+                additionalNews.forEach((news, index) => {
+                    const newsCard = document.createElement('article');
+                    newsCard.className = 'news-card';
+                    newsCard.style.animationDelay = `${index * 0.1}s`;
+                    newsCard.innerHTML = `
+                        <div class="news-card-image-wrapper">
+                            <img src="${news.image}" alt="${news.title}">
+                        </div>
+                        <div class="news-card-content">
+                            <p class="news-card-category">${news.category}</p>
+                            <h2 class="news-card-title">${news.title}</h2>
+                        </div>
+                    `;
+                    newsGrid.appendChild(newsCard);
+                });
+                
+                // Hide loading and reset button
+                loadingOverlay.style.display = 'none';
+                button.disabled = false;
+                button.innerHTML = 'More Alfaisal News';
+                
+                // Show success message
+                showNotification('New articles loaded successfully!', 'success');
+                
+            }, 2000); // 2 second delay to simulate loading
+        }
+
+        // Back to top functionality
+        window.onscroll = function() {
+            const backToTop = document.getElementById('backToTop');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                background-color: ${type === 'success' ? '#28a745' : '#007bff'};
+                color: white;
+                border-radius: 5px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                z-index: 10000;
+                font-weight: 600;
+                transform: translateX(400px);
+                transition: transform 0.3s ease;
+            `;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}" style="margin-right: 8px;"></i>
+                ${message}
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Search functionality
+        document.querySelector('.search-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const searchQuery = prompt('Enter your search query:');
+            if (searchQuery) {
+                showNotification(`Searching for: "${searchQuery}"`, 'info');
+                // Here you would implement actual search functionality
+                console.log('Searching for:', searchQuery);
+            }
+        });
+
+        // Add click analytics to news cards
+        document.querySelectorAll('.news-card').forEach((card, index) => {
+            card.addEventListener('click', function() {
+                const title = this.querySelector('.news-card-title').textContent;
+                const category = this.querySelector('.news-card-category').textContent;
+                console.log('News card clicked:', { title, category, index });
+                // Here you would implement actual analytics tracking
+            });
+        });
+
+        // Lazy loading for images
+        const observerOptions = {
+            root: null,
+            rootMargin: '50px',
+            threshold: 0.1
+        };
+
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.style.opacity = '0';
+                    img.style.transition = 'opacity 0.3s ease';
+                    
+                    const tempImg = new Image();
+                    tempImg.onload = function() {
+                        img.style.opacity = '1';
+                    };
+                    tempImg.src = img.src;
+                    
+                    observer.unobserve(img);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all images
+        document.querySelectorAll('.news-card img').forEach(img => {
+            imageObserver.observe(img);
+        });
+
+        // Welcome message
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                showNotification('Welcome to Alfaisal University News!', 'success');
+            }, 1000);
+        });
+
+        // Add spin animation for loading
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            
+            #backToTop:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(255,215,0,0.3);
+                background: linear-gradient(135deg, var(--alfaisal-gold), var(--alfaisal-hover-gold));
+                color: var(--alfaisal-blue);
+            }
+        `;
+        document.head.appendChild(style);
+
+    </script>
+
+</body>
+</html>

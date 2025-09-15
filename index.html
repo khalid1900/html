@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/js/all.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Source+Sans+Pro:wght@400;600;700&family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&family=Source+Sans+Pro:wght@400;600;700&family=Source+Serif+Pro:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --alfaisal-blue: #003366;
@@ -59,7 +62,7 @@
             align-items: center;
             gap: 20px;
         }
-        
+
         .top-bar-links span {
             font-weight: 600;
         }
@@ -115,6 +118,14 @@
             transition: transform 0.3s ease;
         }
 
+
+        .university-logo {
+            width: 150px;
+            height: 300px;
+            transition: transform 0.3s ease;
+        }
+
+
         .logo:hover .university-logo-svg {
             transform: scale(1.05);
         }
@@ -154,7 +165,7 @@
             font-weight: 700;
             margin: 0 0 10px;
             color: var(--alfaisal-blue);
-            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .page-title-section p {
@@ -177,7 +188,7 @@
 
         .news-card {
             border: 1px solid var(--alfaisal-border);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             transition: all 0.3s ease;
@@ -188,10 +199,10 @@
 
         .news-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,51,102,0.15);
+            box-shadow: 0 8px 25px rgba(0, 51, 102, 0.15);
             border-color: var(--alfaisal-gold);
         }
-        
+
         .news-card-image-wrapper {
             position: relative;
             overflow: hidden;
@@ -208,7 +219,7 @@
         .news-card:hover img {
             transform: scale(1.05);
         }
-        
+
         .play-button {
             position: absolute;
             top: 50%;
@@ -229,7 +240,7 @@
             background-color: var(--alfaisal-gold);
             transform: translate(-50%, -50%) scale(1.1);
         }
-        
+
         .play-button::after {
             content: '';
             width: 0;
@@ -288,14 +299,14 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(0,51,102,0.2);
+            box-shadow: 0 4px 15px rgba(0, 51, 102, 0.2);
         }
 
         .more-news-button:hover {
             background: linear-gradient(135deg, var(--alfaisal-gold), var(--alfaisal-hover-gold));
             color: var(--alfaisal-blue);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255,215,0,0.3);
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
         }
 
         /* Footer */
@@ -322,7 +333,7 @@
             align-items: center;
             justify-content: center;
             background-color: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
@@ -330,7 +341,7 @@
             color: white;
             background-color: var(--alfaisal-blue);
             transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,51,102,0.2);
+            box-shadow: 0 6px 15px rgba(0, 51, 102, 0.2);
         }
 
         .footer-links-grid {
@@ -367,7 +378,7 @@
         .footer-column a:hover {
             color: var(--alfaisal-blue);
         }
-        
+
         .footer-buttons a {
             display: block;
             text-align: center;
@@ -404,7 +415,7 @@
             color: white;
             font-size: 32px;
         }
-        
+
         .bottom-footer-links {
             display: flex;
             flex-direction: column;
@@ -412,13 +423,14 @@
             gap: 15px;
             font-size: 14px;
         }
-        
+
         .bottom-footer-links div {
             display: flex;
             gap: 25px;
         }
-        
-        .bottom-footer-links a, .bottom-footer-links span {
+
+        .bottom-footer-links a,
+        .bottom-footer-links span {
             color: white;
             transition: color 0.3s ease;
         }
@@ -434,14 +446,37 @@
             transform: translateY(30px);
         }
 
-        .news-card:nth-child(1) { animation-delay: 0.1s; }
-        .news-card:nth-child(2) { animation-delay: 0.2s; }
-        .news-card:nth-child(3) { animation-delay: 0.3s; }
-        .news-card:nth-child(4) { animation-delay: 0.4s; }
-        .news-card:nth-child(5) { animation-delay: 0.5s; }
-        .news-card:nth-child(6) { animation-delay: 0.6s; }
-        .news-card:nth-child(7) { animation-delay: 0.7s; }
-        .news-card:nth-child(8) { animation-delay: 0.8s; }
+        .news-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .news-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .news-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .news-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .news-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .news-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .news-card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .news-card:nth-child(8) {
+            animation-delay: 0.8s;
+        }
 
         @keyframes fadeInUp {
             to {
@@ -455,6 +490,7 @@
             .main-nav ul {
                 gap: 20px;
             }
+
             .main-nav a {
                 font-size: 16px;
             }
@@ -464,60 +500,132 @@
             .news-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             .footer-links-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+
             .main-header .container {
                 flex-direction: column;
                 gap: 20px;
             }
         }
-        
+
         @media (max-width: 768px) {
             .top-bar .container {
                 flex-direction: column;
                 gap: 10px;
             }
+
             .main-nav ul {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 15px;
             }
+
             .page-title-section h1 {
                 font-size: 40px;
             }
+
             .page-title-section p {
                 font-size: 18px;
             }
+
             .news-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
+
             .footer-links-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
             .bottom-footer .container {
                 flex-direction: column;
                 gap: 30px;
                 align-items: center;
                 text-align: center;
             }
+
             .bottom-footer-links {
                 align-items: center;
             }
+
             .bottom-footer-links div {
                 flex-direction: column;
                 gap: 15px;
             }
+
             .logo {
                 font-size: 24px;
             }
         }
-        
+
+
+
+        .quick-links-section {
+            padding: 40px 0;
+            background-color: var(--alfaisal-light-bg);
+        }
+
+        .quick-links-section h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--alfaisal-dark-text);
+            font-size: 24px;
+        }
+
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 20px;
+        }
+
+        .quick-link-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 15px;
+            background: var(--alfaisal-blue);
+            color: white;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .quick-link-item:hover {
+            background: var(--alfaisal-gold);
+            color: var(--alfaisal-blue);
+            transform: translateY(-5px);
+        }
+
+        .quick-link-item i {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .quick-link-item span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1024px) {
+            .quick-links-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .quick-links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 480px) {
             .footer-links-grid {
                 grid-template-columns: 1fr;
             }
+
             .container {
                 padding: 0 15px;
             }
@@ -547,9 +655,61 @@
         .top-bar-links a:hover::after {
             width: 100%;
         }
+.hero-section {
+    background-image: url('https://extranet.avian.co.uk/alfaisal-university/design-application/images/banner-001.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center; /* Vertically aligns the content */
+    justify-content: center;
+    height: 500px;
+    color: white; 
+}
 
+        .stats-section {
+            background-color: white;
+            padding: 50px 0;
+            border-bottom: 1px solid var(--alfaisal-border);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--alfaisal-blue);
+            margin-bottom: 10px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--alfaisal-light-text);
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 36px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -573,24 +733,28 @@
             <div class="container">
                 <a href="#" class="logo">
                     <svg class="university-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <radialGradient id="blueGradient" cx="50%" cy="50%" r="50%">
-                                <stop offset="0%" style="stop-color:#4169E1;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
-                            </radialGradient>
-                        </defs>
-                        <!-- Shield Background -->
-                        <path d="M50 5 L85 25 L85 65 Q85 85 50 95 Q15 85 15 65 L15 25 Z" fill="url(#blueGradient)" stroke="#FFD700" stroke-width="2"/>
-                        <!-- Crown Symbol -->
-                        <path d="M35 35 L40 25 L45 35 L50 25 L55 35 L60 25 L65 35 L60 40 L40 40 Z" fill="#FFD700"/>
-                        <!-- Arabic-inspired geometric pattern -->
-                        <circle cx="50" cy="55" r="8" fill="#FFD700"/>
-                        <path d="M42 55 L50 45 L58 55 L50 65 Z" fill="none" stroke="#FFD700" stroke-width="2"/>
-                        <!-- Knowledge symbol (book) -->
-                        <rect x="45" y="70" width="10" height="8" fill="#FFD700"/>
-                        <line x1="47" y1="72" x2="53" y2="72" stroke="#003366" stroke-width="1"/>
-                        <line x1="47" y1="74" x2="53" y2="74" stroke="#003366" stroke-width="1"/>
-                        <line x1="47" y1="76" x2="53" y2="76" stroke="#003366" stroke-width="1"/>
+                        <image href="https://catalog.alfaisal.edu/themes/custom/alfaisal/images/logo.png" x="0" y="0"
+                            width="100" height="100" />
+                    </svg>
+                    <defs>
+                        <radialGradient id="blueGradient" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:#4169E1;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+                        </radialGradient>
+                    </defs>
+                    <!-- Shield Background -->
+                    <path d="M50 5 L85 25 L85 65 Q85 85 50 95 Q15 85 15 65 L15 25 Z" fill="url(#blueGradient)"
+                        stroke="#FFD700" stroke-width="2" />
+                    <!-- Crown Symbol -->
+                    <path d="M35 35 L40 25 L45 35 L50 25 L55 35 L60 25 L65 35 L60 40 L40 40 Z" fill="#FFD700" />
+                    <!-- Arabic-inspired geometric pattern -->
+                    <circle cx="50" cy="55" r="8" fill="#FFD700" />
+                    <path d="M42 55 L50 45 L58 55 L50 65 Z" fill="none" stroke="#FFD700" stroke-width="2" />
+                    <!-- Knowledge symbol (book) -->
+                    <rect x="45" y="70" width="10" height="8" fill="#FFD700" />
+                    <line x1="47" y1="72" x2="53" y2="72" stroke="#003366" stroke-width="1" />
+                    <line x1="47" y1="74" x2="53" y2="74" stroke="#003366" stroke-width="1" />
+                    <line x1="47" y1="76" x2="53" y2="76" stroke="#003366" stroke-width="1" />
                     </svg>
                     Alfaisal University
                 </a>
@@ -612,18 +776,96 @@
     </header>
 
     <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Discover Your Future with Alfaisal University</h1>
+                    <p>Leading private university in Saudi Arabia, shaping tomorrow's leaders through innovation and
+                        excellence</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary">Apply Now</a>
+                        <a href="#" class="btn-secondary">Visit Campus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">1st</div>
+                        <div class="stat-label">Private University<br>in Saudi Arabia</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">36th</div>
+                        <div class="stat-label">in Arab World<br>University Rankings</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20/1</div>
+                        <div class="stat-label">Student to Faculty<br>Ratio</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">6,284</div>
+                        <div class="stat-label">Students<br>Enrolled</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="quick-links-section">
+            <div class="container">
+                <h3>Start with Popular Information:</h3>
+                <div class="quick-links-grid">
+                    <a href="#" class="quick-link-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Academic Programs</span>
+                    </a>
+                    <a href="#" class="quick-link-item">
+                        <i class="fas fa-microscope"></i>
+                        <span>Research</span>
+                    </a>
+                    <a href="#" class="quick-link-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Admissions</span>
+                    </a>
+                    <a href="#" class="quick-link-item">
+                        <i class="fas fa-building"></i>
+                        <span>Campus Life</span>
+                    </a>
+                    <a href="#" class="quick-link-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>Health Services</span>
+                    </a>
+                    <a href="#" class="quick-link-item">
+                        <i class="fas fa-users"></i>
+                        <span>Student Services</span>
+                    </a>
+                    <a href="#" class="quick-link-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Events</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
         <section class="page-title-section">
             <div class="container">
-                <h1>Alfaisal News</h1>
-                <p>Stories about people, research, and innovation across the Kingdom</p>
+                <h2>Latest News & Updates</h2>
+                <p>Stay informed about our community, research, and achievements</p>
+
+               
             </div>
+        </section>
         </section>
 
         <section class="news-grid-section container">
             <div class="news-grid">
                 <article class="news-card">
                     <div class="news-card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=entropy" alt="Colorful abstract illustration of a microphone with sound waves and geometric shapes exploding from it.">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=entropy"
+                            alt="Colorful abstract illustration of a microphone with sound waves and geometric shapes exploding from it.">
                     </div>
                     <div class="news-card-content">
                         <p class="news-card-category">ACADEMICS</p>
@@ -633,37 +875,44 @@
 
                 <article class="news-card">
                     <div class="news-card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&h=400&fit=crop&crop=entropy" alt="A crowd of Alfaisal football fans in a stadium">
+                        <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=600&h=400&fit=crop&crop=entropy"
+                            alt="A crowd of Alfaisal football fans in a stadium">
                     </div>
                     <div class="news-card-content">
                         <p class="news-card-category">ATHLETICS</p>
-                        <h2 class="news-card-title">5 Things to know about Alfaisal Football before its first home game</h2>
+                        <h2 class="news-card-title">5 Things to know about Alfaisal Football before its first home game
+                        </h2>
                     </div>
                 </article>
 
                 <article class="news-card">
                     <div class="news-card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=entropy" alt="A smiling woman with short blonde hair, wearing a black blazer">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=entropy"
+                            alt="A smiling woman with short blonde hair, wearing a black blazer">
                     </div>
                     <div class="news-card-content">
                         <p class="news-card-category">AWARDS</p>
-                        <h2 class="news-card-title">Scientist, advocate, and entrepreneur Lucy Shapiro to receive Lasker-Koshland Special Achievement Award</h2>
+                        <h2 class="news-card-title">Scientist, advocate, and entrepreneur Lucy Shapiro to receive
+                            Lasker-Koshland Special Achievement Award</h2>
                     </div>
                 </article>
 
                 <article class="news-card">
                     <div class="news-card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=400&fit=crop&crop=entropy" alt="A female scientist in a white lab coat working in a laboratory">
+                        <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600&h=400&fit=crop&crop=entropy"
+                            alt="A female scientist in a white lab coat working in a laboratory">
                     </div>
                     <div class="news-card-content">
                         <p class="news-card-category">HEALTH & MEDICINE</p>
-                        <h2 class="news-card-title">Lung cancer cells in the brain connect with neurons to fuel tumor growth</h2>
+                        <h2 class="news-card-title">Lung cancer cells in the brain connect with neurons to fuel tumor
+                            growth</h2>
                     </div>
                 </article>
 
                 <article class="news-card">
                     <div class="news-card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=entropy" alt="A man with dark hair and a beard, wearing a blazer">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=entropy"
+                            alt="A man with dark hair and a beard, wearing a blazer">
                     </div>
                     <div class="news-card-content">
                         <p class="news-card-category">ARTS & HUMANITIES</p>
@@ -673,18 +922,21 @@
 
                 <article class="news-card">
                     <div class="news-card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop&crop=entropy" alt="A group of people walking through a forest">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop&crop=entropy"
+                            alt="A group of people walking through a forest">
                         <a href="#" class="play-button"></a>
                     </div>
                     <div class="news-card-content">
                         <p class="news-card-category">LAW</p>
-                        <h2 class="news-card-title">Charting the journey of sacred Sáttítla to national monument status</h2>
+                        <h2 class="news-card-title">Charting the journey of sacred Sáttítla to national monument status
+                        </h2>
                     </div>
                 </article>
 
                 <article class="news-card">
                     <div class="news-card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&crop=entropy" alt="A research vessel in an icy arctic sea">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop&crop=entropy"
+                            alt="A research vessel in an icy arctic sea">
                     </div>
                     <div class="news-card-content">
                         <p class="news-card-category">EARTH & CLIMATE</p>
@@ -694,11 +946,13 @@
 
                 <article class="news-card">
                     <div class="news-card-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=entropy" alt="Two students looking intently at laptops in a classroom">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop&crop=entropy"
+                            alt="Two students looking intently at laptops in a classroom">
                     </div>
                     <div class="news-card-content">
                         <p class="news-card-category">EDUCATION</p>
-                        <h2 class="news-card-title">Alfaisal researchers team up with Google to launch game teaching responsible AI use</h2>
+                        <h2 class="news-card-title">Alfaisal researchers team up with Google to launch game teaching
+                            responsible AI use</h2>
                     </div>
                 </article>
             </div>
@@ -791,29 +1045,33 @@
             </div>
         </div>
     </footer>
-    
+
     <div class="bottom-footer">
         <div class="container">
             <a href="#" class="logo">
-                <svg class="university-logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px;">
-                    <defs>
-                        <radialGradient id="blueGradientFooter" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" style="stop-color:#4169E1;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
-                        </radialGradient>
-                    </defs>
-                    <!-- Shield Background -->
-                    <path d="M50 5 L85 25 L85 65 Q85 85 50 95 Q15 85 15 65 L15 25 Z" fill="url(#blueGradientFooter)" stroke="#FFD700" stroke-width="2"/>
-                    <!-- Crown Symbol -->
-                    <path d="M35 35 L40 25 L45 35 L50 25 L55 35 L60 25 L65 35 L60 40 L40 40 Z" fill="#FFD700"/>
-                    <!-- Arabic-inspired geometric pattern -->
-                    <circle cx="50" cy="55" r="8" fill="#FFD700"/>
-                    <path d="M42 55 L50 45 L58 55 L50 65 Z" fill="none" stroke="#FFD700" stroke-width="2"/>
-                    <!-- Knowledge symbol (book) -->
-                    <rect x="45" y="70" width="10" height="8" fill="#FFD700"/>
-                    <line x1="47" y1="72" x2="53" y2="72" stroke="#003366" stroke-width="1"/>
-                    <line x1="47" y1="74" x2="53" y2="74" stroke="#003366" stroke-width="1"/>
-                    <line x1="47" y1="76" x2="53" y2="76" stroke="#003366" stroke-width="1"/>
+                <svg class="university-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <image href="https://vacancyedu.com/wp-content/uploads/2021/07/Untitled-design-66-1024x536-1.png"
+                        x="0" y="0" width="100" height="100" />
+                </svg>
+                <defs>
+                    <radialGradient id="blueGradientFooter" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" style="stop-color:#4169E1;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+                    </radialGradient>
+                </defs>
+                <!-- Shield Background -->
+                <path d="M50 5 L85 25 L85 65 Q85 85 50 95 Q15 85 15 65 L15 25 Z" fill="url(#blueGradientFooter)"
+                    stroke="#FFD700" stroke-width="2" />
+                <!-- Crown Symbol -->
+                <path d="M35 35 L40 25 L45 35 L50 25 L55 35 L60 25 L65 35 L60 40 L40 40 Z" fill="#FFD700" />
+                <!-- Arabic-inspired geometric pattern -->
+                <circle cx="50" cy="55" r="8" fill="#FFD700" />
+                <path d="M42 55 L50 45 L58 55 L50 65 Z" fill="none" stroke="#FFD700" stroke-width="2" />
+                <!-- Knowledge symbol (book) -->
+                <rect x="45" y="70" width="10" height="8" fill="#FFD700" />
+                <line x1="47" y1="72" x2="53" y2="72" stroke="#003366" stroke-width="1" />
+                <line x1="47" y1="74" x2="53" y2="74" stroke="#003366" stroke-width="1" />
+                <line x1="47" y1="76" x2="53" y2="76" stroke="#003366" stroke-width="1" />
                 </svg>
                 <span style="margin-left: 10px;">Alfaisal<br>University</span>
             </a>
@@ -838,15 +1096,19 @@
     </div>
 
     <!-- Loading Overlay -->
-    <div id="loadingOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,51,102,0.9); z-index: 9999; justify-content: center; align-items: center;">
+    <div id="loadingOverlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,51,102,0.9); z-index: 9999; justify-content: center; align-items: center;">
         <div style="text-align: center; color: white;">
-            <div style="width: 50px; height: 50px; border: 3px solid #FFD700; border-top: 3px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+            <div
+                style="width: 50px; height: 50px; border: 3px solid #FFD700; border-top: 3px solid transparent; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;">
+            </div>
             <p style="font-size: 18px; font-weight: 600;">Loading More News...</p>
         </div>
     </div>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" onclick="scrollToTop()" style="display: none; position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, var(--alfaisal-blue), var(--alfaisal-light-blue)); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 15px rgba(0,51,102,0.3); transition: all 0.3s ease; z-index: 1000;">
+    <button id="backToTop" onclick="scrollToTop()"
+        style="display: none; position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, var(--alfaisal-blue), var(--alfaisal-light-blue)); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 15px rgba(0,51,102,0.3); transition: all 0.3s ease; z-index: 1000;">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -855,7 +1117,7 @@
         function smoothScroll(target) {
             const element = document.querySelector(target);
             if (element) {
-                element.scrollIntoView({ 
+                element.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
@@ -867,12 +1129,12 @@
             const loadingOverlay = document.getElementById('loadingOverlay');
             const button = document.querySelector('.more-news-button');
             const newsGrid = document.querySelector('.news-grid');
-            
+
             // Show loading
             loadingOverlay.style.display = 'flex';
             button.disabled = true;
             button.innerHTML = 'Loading...';
-            
+
             // Simulate API call
             setTimeout(() => {
                 const additionalNews = [
@@ -897,7 +1159,7 @@
                         image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=entropy'
                     }
                 ];
-                
+
                 // Add new cards to grid
                 additionalNews.forEach((news, index) => {
                     const newsCard = document.createElement('article');
@@ -914,20 +1176,20 @@
                     `;
                     newsGrid.appendChild(newsCard);
                 });
-                
+
                 // Hide loading and reset button
                 loadingOverlay.style.display = 'none';
                 button.disabled = false;
                 button.innerHTML = 'More Alfaisal News';
-                
+
                 // Show success message
                 showNotification('New articles loaded successfully!', 'success');
-                
+
             }, 2000); // 2 second delay to simulate loading
         }
 
         // Back to top functionality
-        window.onscroll = function() {
+        window.onscroll = function () {
             const backToTop = document.getElementById('backToTop');
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 backToTop.style.display = 'block';
@@ -964,14 +1226,14 @@
                 <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}" style="margin-right: 8px;"></i>
                 ${message}
             `;
-            
+
             document.body.appendChild(notification);
-            
+
             // Animate in
             setTimeout(() => {
                 notification.style.transform = 'translateX(0)';
             }, 100);
-            
+
             // Remove after 3 seconds
             setTimeout(() => {
                 notification.style.transform = 'translateX(400px)';
@@ -982,7 +1244,7 @@
         }
 
         // Search functionality
-        document.querySelector('.search-link').addEventListener('click', function(e) {
+        document.querySelector('.search-link').addEventListener('click', function (e) {
             e.preventDefault();
             const searchQuery = prompt('Enter your search query:');
             if (searchQuery) {
@@ -994,7 +1256,7 @@
 
         // Add click analytics to news cards
         document.querySelectorAll('.news-card').forEach((card, index) => {
-            card.addEventListener('click', function() {
+            card.addEventListener('click', function () {
                 const title = this.querySelector('.news-card-title').textContent;
                 const category = this.querySelector('.news-card-category').textContent;
                 console.log('News card clicked:', { title, category, index });
@@ -1015,13 +1277,13 @@
                     const img = entry.target;
                     img.style.opacity = '0';
                     img.style.transition = 'opacity 0.3s ease';
-                    
+
                     const tempImg = new Image();
-                    tempImg.onload = function() {
+                    tempImg.onload = function () {
                         img.style.opacity = '1';
                     };
                     tempImg.src = img.src;
-                    
+
                     observer.unobserve(img);
                 }
             });
@@ -1033,7 +1295,7 @@
         });
 
         // Welcome message
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 showNotification('Welcome to Alfaisal University News!', 'success');
             }, 1000);
@@ -1059,4 +1321,5 @@
     </script>
 
 </body>
+
 </html>
